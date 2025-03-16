@@ -34,8 +34,23 @@ document.getElementById("riskForm").addEventListener("submit", function(event) {
         //Adds html text into the card, and uses a template literal to use html code in javascript.
         riskCard.innerHTML = 
             `<h3>${riskName}</h3>
-            <p><strong>Level:</strong>${riskLevel}</p>
+            <p><strong>Level:</strong> ${riskLevel}</p>
             <p><strong>Department:</strong> ${riskDepartment}</p>`
+        
+        //Task 3 - Removing Risk Items
+
+        //Creating a resolve button that when clicked, will remove the risk card.
+        resolveButton = document.createElement("button")
+        resolveButton.textContent = "Resolve"
+
+        //Adding the event listner so that when the buttom is clicked, the card is removed.
+        resolveButton.addEventListener("click", (event) => {
+            event.stopPropagation()
+            riskCard.parentNode.removeChild(riskCard)
+        })
+
+        //Adding the resolve button to each card.
+        riskCard.appendChild(resolveButton)
         
         //Adds the risk card to the risk dashboard.
         riskDashboard.appendChild(riskCard)
