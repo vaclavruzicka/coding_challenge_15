@@ -70,4 +70,13 @@ document.getElementById("riskForm").addEventListener("submit", function(event) {
         } else {
             riskCard.style.backgroundColor = "green"
         }
+        
+        //Task 5 - Implementing Bulk Updates
+
+        //Creating a button that will allow for the risk level to be increased.
+        increaseRiskButton = document.createElement("button")
+        increaseRiskButton.textContent = "Increase Risk Levels"
+
+        //Adding the increase risk button to every risk card.
+        riskCard.appendChild(increaseRiskButton)
     }  
