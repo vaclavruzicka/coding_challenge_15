@@ -18,14 +18,14 @@ document.getElementById("riskForm").addEventListener("submit", function(event) {
     const riskDepartment = document.getElementById("riskDepartment").value
 
     //Runs the add risk card function.
-    addRiskCard(riskName, riskLevel, riskDepartment)
+    addRiskItem(riskName, riskLevel, riskDepartment)
 
     //Resets the form after the submit button is hit.
     this.reset()
    })
 
     //Creating a function that creates a risk card using the text that was put into the form.
-    function addRiskCard(riskName, riskLevel, riskDepartment) {
+    function addRiskItem(riskName, riskLevel, riskDepartment) {
         const riskCard = document.createElement("div")
 
         //Sets the risk card's class to "risk-card".
