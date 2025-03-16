@@ -46,6 +46,10 @@ document.getElementById("riskForm").addEventListener("submit", function(event) {
 
         //Adding the event listner so that when the buttom is clicked, the card is removed.
         resolveButton.addEventListener("click", (event) => {
+
+            //Task 6 - Handling Event Propagation
+
+            //Using stop propoagation in order to not allow for unwanted clicks to remove the risk cards.
             event.stopPropagation()
             riskCard.parentNode.removeChild(riskCard)
         })
