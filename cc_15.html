@@ -14,9 +14,17 @@
     }
     footer {
         position: fixed;
-        left: 180px;
+        left: 500px;
         bottom: 0px;
     }
+    .risk-card{
+        padding: 10px;
+        margin: 10px;
+        background-color: gray;
+        border-radius: 5px;
+        display: inline-block;
+    }
+
 </style>
 <body>
     <header>
@@ -25,16 +33,26 @@
 
     <main>
      <h2>Risks</h2>
-     
-     <!--Creating the risk dashboard container.-->
-     <div id="riskDashboard"></div>
-
      <!--Creating an input form and submit button.-->
      <form id="riskForm">
-        <label for="riskInput">Enter Risk:</label>
-        <input type="text" id="riskInput" name="riskInput" required>
+        <label for="riskName">Risk Name:</label>
+        <input type="text" id="riskName" name="riskName" required>
+        <br>
+        <label for="riskLevel">Risk Level:</label>
+        <select id="riskLevel" name="riskLevel" required>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+        <br>
+        <label for="riskDepartment">Department:</label>
+        <input type="text" id="riskDepartment" name="riskDepartment" required>
+        <br>
         <button type="submit">Add Risk</button>
      </form>
+
+     <!--Creating the risk dashboard container.-->
+     <div id="riskDashboard"></div>
     </main>
 
     <footer>
