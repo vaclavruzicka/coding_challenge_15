@@ -30,6 +30,7 @@ document.getElementById("riskForm").addEventListener("submit", function(event) {
 
         //Sets the risk card's class to "risk-card".
         riskCard.setAttribute("class", "risk-card")
+        riskCard.setAttribute("id", riskLevel)
 
         //Adds html text into the card, and uses a template literal to use html code in javascript.
         riskCard.innerHTML = 
@@ -51,7 +52,18 @@ document.getElementById("riskForm").addEventListener("submit", function(event) {
 
         //Adding the resolve button to each card.
         riskCard.appendChild(resolveButton)
-        
+
         //Adds the risk card to the risk dashboard.
         riskDashboard.appendChild(riskCard)
-    }
+        
+        //Task 4 - Categorizing Risks By Level
+
+        //Using an if, else if, else statement to set the background color to the desired color based on risk level.
+        if (riskLevel === "High") {
+            riskCard.style.backgroundColor = "red"
+        } else if (riskLevel === "Medium") {
+            riskCard.style.backgroundColor = "yellow"
+        } else {
+            riskCard.style.backgroundColor = "green"
+        }
+    }  
